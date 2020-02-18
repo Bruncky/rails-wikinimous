@@ -3,10 +3,13 @@
     <ul>
         <% @articles.each do |article| %>
         <li>
-            <%= link_to article.title, article_path(article) %> &#183
-            <a href="<%= article_path(article) %>" data-method="delete">
-                <i class="fas fa-trash-alt"></i>
-            </a>
+            <h1>
+                <%= link_to article.title, article_path(article) %> &#8211
+                <a href="<%= article_path(article) %>" data-method="delete">
+                    <i class="fas fa-trash-alt"></i>
+                </a>
+            </h1>
+            <p><%= article.content %></p>
         </li>
         <% end %>
     </ul>
