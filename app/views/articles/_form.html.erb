@@ -1,0 +1,14 @@
+<%= form_for @task do |form| %>
+    <div class="form-group">
+        <label for="article-title">Article</label>
+        <%= form.text_field :title, id: "article-title", class: "form-control", autocomplete: "off" %>
+        <small class="form-text text-muted">What's the article's title?</small>
+    </div>
+    <div class="form-group">
+        <label for="article-content">Article Content</label>
+        <small class="form-text text-muted">Write the body of the article here</small>
+        <%= form.text_area :content, id: "article-content", class: "form-control", rows: "3" %>
+    </div>
+    <a class="btn btn-danger" href="http://localhost:3000/articles" role="button">Back to Articles</a>
+    <%= form.submit "Confirm", class: "btn btn-success" %>
+<% end %>
